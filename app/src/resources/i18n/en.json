@@ -527,6 +527,8 @@
       "updateRootRepeatPlaceholder": "Please enter the new root password again",
       "title": "Site name",
       "titleTip": "Site name to display in the site title, leave blank for default",
+      "description": "Site description",
+      "descriptionTip": "Site description to display in the site description, leave blank for default",
       "logo": "Site Logo",
       "logoTip": "Link to the site logo to display in the site title, leave blank for default (e.g. {{logo}})",
       "backendPlaceholder": "Backend callback domain name, empty by default, required for accepting callbacks",

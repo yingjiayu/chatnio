@@ -163,6 +163,19 @@ function General({ data, dispatch, onChange }: CompProps<GeneralState>) {
         />
       </ParagraphItem>
       <ParagraphItem>
+        <Label>{t("admin.system.description")}</Label>
+        <Input
+            value={data.description}
+            onChange={(e) =>
+                dispatch({
+                  type: "update:general.description",
+                  value: e.target.value,
+                })
+            }
+            placeholder={t("admin.system.descriptionTip")}
+        />
+      </ParagraphItem>
+      <ParagraphItem>
         <Label>{t("admin.system.docs")}</Label>
         <Input
           value={data.docs}

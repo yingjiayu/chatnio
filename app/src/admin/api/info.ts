@@ -3,6 +3,7 @@ import {
   setAnnouncement,
   setAppLogo,
   setAppName,
+  setAppDescription,
   setBlobEndpoint,
   setBuyLink,
   setDocsUrl,
@@ -11,6 +12,7 @@ import { infoEvent, InfoForm } from "@/events/info.ts";
 
 export type SiteInfo = {
   title: string;
+  description: string,
   logo: string;
   docs: string;
   file: string;
@@ -33,6 +35,7 @@ export async function getSiteInfo(): Promise<SiteInfo> {
     console.warn(e);
     return {
       title: "",
+      description: "",
       logo: "",
       docs: "",
       file: "",
@@ -52,8 +55,8 @@ export async function getSiteInfo(): Promise<SiteInfo> {
 export function syncSiteInfo() {
   setTimeout(async () => {
     const info = await getSiteInfo();
-
     setAppName(info.title);
+    setAppDescription(info.description);
     setAppLogo(info.logo);
     setDocsUrl(info.docs);
     setBlobEndpoint(info.file);

@@ -691,6 +691,8 @@
       "test": "测试发件",
       "title": "网站名称",
       "titleTip": "网站名称，用于显示在网站标题，留空默认",
+      "description": "网站描述",
+      "descriptionTip": "网站描述，用于显示在网站描述，留空默认",
       "logo": "网站 Logo",
       "docs": "文档链接",
       "docsTip": "文档链接，留空默认 https://docs.chatnio.net",
