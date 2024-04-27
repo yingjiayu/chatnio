@@ -5,7 +5,11 @@ import { announcementEvent } from "@/events/announcement.ts";
 export let appName =
   localStorage.getItem("app_name") ||
   import.meta.env.VITE_APP_NAME ||
-  "Chat Nio";
+  "";
+export let appDescription =
+    localStorage.getItem("app_description") ||
+    import.meta.env.VITE_APP_DESCRIPTION ||
+    "";
 export let appLogo =
   localStorage.getItem("app_logo") ||
   import.meta.env.VITE_APP_LOGO ||
@@ -74,11 +78,20 @@ export function setAppName(name: string): void {
   /**
    * set the app name in localStorage
    */
-  name = name.trim() || "Chat Nio";
+  name = name.trim() || "";
   setMemory("app_name", name);
   appName = name;
 
   updateDocumentTitle(name);
+}
+export function setAppDescription(description: string): void {
+  /**
+   * set the app name in localStorage
+   */
+  description = description.trim() || "";
+  setMemory("app_description", description);
+  appDescription = description;
+
 }
 
 export function setAppLogo(logo: string): void {
@@ -96,7 +109,7 @@ export function setDocsUrl(url: string): void {
   /**
    * set the docs url in localStorage
    */
-  url = url.trim() || "https://docs.chatnio.net";
+  url = url.trim() || "";
   setMemory("docs_url", url);
   docsEndpoint = url;
 }
@@ -105,7 +118,7 @@ export function setBlobEndpoint(endpoint: string): void {
   /**
    * set the blob endpoint in localStorage
    */
-  endpoint = endpoint.trim() || "https://blob.chatnio.net";
+  endpoint = endpoint.trim() || "";
   setMemory("blob_endpoint", endpoint);
   blobEndpoint = endpoint;
 }

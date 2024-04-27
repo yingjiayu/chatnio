@@ -47,10 +47,10 @@ export function getLanguage(): string {
     return storage;
   }
   // get browser language
-  const lang = navigator.language.split("-")[0];
-  if (supportedLanguages.includes(lang)) {
-    return lang;
-  }
+  // const lang = navigator.language.split("-")[0];
+  // if (supportedLanguages.includes(lang)) {
+  //   return lang;
+  // }
   return defaultLanguage;
 }
 

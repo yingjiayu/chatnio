@@ -18,7 +18,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog.tsx";
 import { selectAdmin, selectAuthenticated } from "@/store/auth.ts";
-import { appLogo } from "@/conf/env.ts";
+import {appDescription, appLogo, appName} from "@/conf/env.ts";
 import {
   infoArticleSelector,
   infoAuthFooterSelector,
@@ -61,6 +61,9 @@ function ChatSpace() {
         className={`chat-logo h-20 w-20 translate-y-[-2rem]`}
         alt={``}
       />
+
+      <span className={`title`}>{appName}</span>
+      <span>{appDescription}</span>
 
       {admin && (
         <Button variant={`outline`} onClick={() => router.navigate("/admin")}>

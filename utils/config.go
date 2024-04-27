@@ -9,7 +9,8 @@ import (
 	"strings"
 )
 
-var configFile = "config/config.yaml"
+// var configFile = "config/config.yaml"
+var configFile = "config/config-pro.yaml"
 var configExampleFile = "config.example.yaml"
 
 var redirectRoutes = []string{

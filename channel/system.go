@@ -10,6 +10,7 @@ import (
 
 type ApiInfo struct {
 	Title        string   `json:"title"`
+	Description  string   `json:"description"`
 	Logo         string   `json:"logo"`
 	File         string   `json:"file"`
 	Docs         string   `json:"docs"`
@@ -26,6 +27,7 @@ type ApiInfo struct {
 
 type generalState struct {
 	Title       string `json:"title" mapstructure:"title"`
+	Description string `json:"description" mapstructure:"description"`
 	Logo        string `json:"logo" mapstructure:"logo"`
 	Backend     string `json:"backend" mapstructure:"backend"`
 	File        string `json:"file" mapstructure:"file"`
@@ -123,6 +125,7 @@ func (c *SystemConfig) SaveConfig() error {
 func (c *SystemConfig) AsInfo() ApiInfo {
 	return ApiInfo{
 		Title:        c.General.Title,
+		Description:  c.General.Description,
 		Logo:         c.General.Logo,
 		File:         c.General.File,
 		Docs:         c.General.Docs,

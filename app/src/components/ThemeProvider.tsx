@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { getMemory, setMemory } from "@/utils/memory.ts";
 import { themeEvent } from "@/events/theme.ts";
 
-const defaultTheme: Theme = "dark";
+const defaultTheme: Theme = "light";
 
 export type Theme = "dark" | "light" | "system";
 
@@ -53,7 +53,7 @@ const initialState: ThemeProviderState = {
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
 export function ThemeProvider({
-  defaultTheme = "dark",
+  defaultTheme = "light",
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
