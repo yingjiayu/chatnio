@@ -132,7 +132,7 @@ redis:
 secret: secret
 serve_static: "true"
 server:
-    port: 80
+    port: 8880
 system:
     general:
         title: UNIAI
